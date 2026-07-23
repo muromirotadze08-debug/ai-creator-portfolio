@@ -1,4 +1,5 @@
 :root {
+  --canvas: #f7f7f8;
   --surface: #ffffff;
   --surface-alt: #f7f7f8;
   --ink: #101010;
@@ -20,7 +21,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--surface);
+  background: var(--canvas);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0;
 }
@@ -44,7 +45,7 @@ code {
   align-items: center;
   min-height: 72px;
   padding: 0 max(20px, calc((100vw - var(--max)) / 2));
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(247, 247, 248, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(12px);
 }
@@ -163,7 +164,7 @@ p {
   align-self: start;
   margin-top: 10px;
   padding: 24px;
-  background: var(--surface-alt);
+  background: var(--surface);
   border-left: 1px solid var(--line);
 }
 
@@ -273,6 +274,7 @@ p {
 .directions article {
   min-height: 220px;
   padding: 22px;
+  background: var(--surface);
   border-left: 1px solid var(--line);
 }
 
