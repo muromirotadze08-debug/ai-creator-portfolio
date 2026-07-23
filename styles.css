@@ -264,7 +264,7 @@ p {
 
 .directions {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
   border-right: 1px solid var(--line);
