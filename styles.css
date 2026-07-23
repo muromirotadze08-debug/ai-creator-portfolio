@@ -50,8 +50,8 @@ code {
 }
 
 .brand {
-  display: inline-grid;
-  grid-template-columns: auto auto;
+  display: inline-flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: fit-content;
   color: var(--ink);
@@ -95,7 +95,8 @@ code {
 .hero {
   min-height: calc(100vh - 72px);
   padding: 56px 0 40px;
-  align-items: end;
+  grid-template-rows: auto auto auto;
+  align-items: start;
   border-bottom: 1px solid var(--line);
 }
 
@@ -111,8 +112,9 @@ code {
 }
 
 .hero-copy {
-  align-self: center;
-  max-width: 690px;
+  grid-column: 2 / 4;
+  grid-row: 1;
+  max-width: 1080px;
 }
 
 .eyebrow {
@@ -132,8 +134,8 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(44px, 7vw, 96px);
-  line-height: 0.9;
+  font-size: clamp(44px, 5.7vw, 82px);
+  line-height: 0.94;
   font-weight: 700;
 }
 
@@ -156,7 +158,10 @@ p {
 }
 
 .hero-panel {
-  align-self: center;
+  grid-column: 3;
+  grid-row: 2;
+  align-self: start;
+  margin-top: 10px;
   padding: 24px;
   background: var(--surface-alt);
   border-left: 1px solid var(--line);
@@ -229,6 +234,7 @@ p {
 
 .hero-visual {
   grid-column: 2 / 4;
+  grid-row: 3;
   margin: 18px 0 0;
   border-top: 1px solid var(--line);
 }
@@ -481,6 +487,10 @@ p {
     grid-template-columns: 72px minmax(0, 1fr);
   }
 
+  .hero-copy {
+    grid-column: 2;
+  }
+
   .hero-panel,
   .hero-visual,
   .project-grid,
@@ -511,6 +521,11 @@ p {
     justify-content: flex-start;
   }
 
+  .brand {
+    gap: 4px;
+    font-size: 17px;
+  }
+
   .section-grid {
     grid-template-columns: 1fr;
     width: calc(100% - 28px);
@@ -521,6 +536,10 @@ p {
   .hero {
     min-height: auto;
     padding-top: 40px;
+  }
+
+  .hero-copy {
+    grid-column: auto;
   }
 
   .hero-index,
