@@ -374,6 +374,35 @@ p {
   line-height: 1;
 }
 
+.carousel-mini {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(72px, 1fr));
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.carousel-mini-slide {
+  display: grid;
+  align-content: space-between;
+  min-height: 92px;
+  padding: 10px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.carousel-mini-slide span {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.carousel-mini-slide strong {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
 .project-open {
   display: inline-block;
   margin-top: 18px;
@@ -486,6 +515,50 @@ p {
   padding: 28px;
 }
 
+.carousel-showcase {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  gap: 1px;
+  margin: 24px 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.carousel-slide {
+  display: grid;
+  align-content: space-between;
+  min-height: 250px;
+  padding: 18px;
+  background: var(--surface);
+}
+
+.carousel-slide:first-child {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.carousel-slide span {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.carousel-slide:first-child span,
+.carousel-slide:first-child p {
+  color: #ffffff;
+}
+
+.carousel-slide h3 {
+  margin: 42px 0 12px;
+  font-size: 22px;
+}
+
+.carousel-slide p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
 .dialog-content ul {
   display: grid;
   gap: 10px;
@@ -596,6 +669,11 @@ p {
   }
 
   .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-mini,
+  .carousel-showcase {
     grid-template-columns: 1fr;
   }
 

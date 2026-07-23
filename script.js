@@ -22,6 +22,17 @@
           .slice(0, 5)
           .map((tool) => `<span>${escapeText(tool)}</span>`)
           .join("");
+        const carouselPreview = (project.carouselSlides || [])
+          .slice(0, 4)
+          .map(
+            (slide) => `
+              <span class="carousel-mini-slide">
+                <span>${escapeText(slide.label)}</span>
+                <strong>${escapeText(slide.title)}</strong>
+              </span>
+            `,
+          )
+          .join("");
         return `
           <button class="project-card" type="button" data-project-index="${index}">
             <span class="project-mark">${number}</span>
@@ -29,6 +40,7 @@
               <span class="project-meta">${escapeText(project.category)}</span>
               <h3>${escapeText(project.title)}</h3>
               <p>${escapeText(project.summary)}</p>
+              ${carouselPreview ? `<span class="carousel-mini">${carouselPreview}</span>` : ""}
               ${tools ? `<span class="tool-strip">${tools}</span>` : ""}
               <span class="project-open">Открыть кейс</span>
             </span>
@@ -45,6 +57,17 @@
     const tools = (project.tools || [])
       .map((tool) => `<span>${escapeText(tool)}</span>`)
       .join("");
+    const carouselSlides = (project.carouselSlides || [])
+      .map(
+        (slide) => `
+          <article class="carousel-slide">
+            <span>${escapeText(slide.label)}</span>
+            <h3>${escapeText(slide.title)}</h3>
+            <p>${escapeText(slide.text)}</p>
+          </article>
+        `,
+      )
+      .join("");
 
     dialogBody.innerHTML = `
       <article class="dialog-content">
@@ -52,6 +75,7 @@
         <h2 id="dialogTitle">${escapeText(project.title)}</h2>
         <p>${escapeText(project.summary)}</p>
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
+        ${carouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${carouselSlides}</section>` : ""}
         ${tools ? `<div class="dialog-tools" aria-label="Инструменты">${tools}</div>` : ""}
         <ul>${pipeline}</ul>
       </article>
