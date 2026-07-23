@@ -48,6 +48,22 @@ window.portfolioConfig = {
       ],
     },
     {
+      title: "AI Carousel Content System",
+      category: "AI Carousels & Social Content",
+      summary:
+        "Система создания каруселей: сильный первый слайд, структура истории, короткий текст, визуальные кадры и финальный CTA.",
+      result: "Финальный формат: готовая серия слайдов для TikTok Photo Mode, Instagram carousel и Reels covers.",
+      tools: ["ChatGPT", "Midjourney", "Leonardo AI", "Canva", "CapCut"],
+      pipeline: [
+        "Задача: сделать карусель, которую хочется досмотреть до последнего слайда.",
+        "Пример 1: обучающая карусель «5 ошибок в AI-видео, из-за которых ролик выглядит дешево».",
+        "Пример 2: рекламная карусель «Как один продукт показать через 6 визуальных хуков».",
+        "Пример 3: storytelling-карусель «От промпта до финального кадра: как собирается AI-персонаж».",
+        "Структура: обложка-хук, 3-6 смысловых слайдов, визуальный контраст, финальный CTA.",
+        "Производство: ChatGPT для структуры и текста, Midjourney / Leonardo AI для кадров, Canva для сборки, CapCut для адаптации в видео.",
+      ],
+    },
+    {
       title: "Multi-AI Video Workflow",
       category: "Multi-AI Production",
       summary:

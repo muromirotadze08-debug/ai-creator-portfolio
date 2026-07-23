@@ -249,7 +249,7 @@ p {
 
 .directions {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
   border-right: 1px solid var(--line);
@@ -385,7 +385,7 @@ p {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   grid-column: 2 / 4;
   background: var(--line);
@@ -527,7 +527,7 @@ p {
   }
 
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -581,7 +581,8 @@ p {
   }
 
   .directions,
-  .steps {
+  .steps,
+  .service-grid {
     grid-template-columns: 1fr;
     width: calc(100% - 28px);
   }
