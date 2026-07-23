@@ -280,6 +280,7 @@ p {
   font-size: 15px;
 }
 
+.carousel-examples,
 .work,
 .services,
 .process,
@@ -296,6 +297,210 @@ p {
 .process .section-title,
 .contact .section-title {
   max-width: 760px;
+}
+
+.carousel-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 12px;
+  grid-column: 2 / 4;
+  padding-right: 20px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.visual-slide {
+  position: relative;
+  display: grid;
+  align-content: space-between;
+  min-width: 184px;
+  min-height: 330px;
+  aspect-ratio: 9 / 16;
+  padding: 18px;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.visual-slide::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.slide-topline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.visual-slide h3 {
+  position: relative;
+  z-index: 1;
+  margin: 64px 0 10px;
+  font-size: clamp(22px, 2.1vw, 34px);
+  line-height: 0.96;
+}
+
+.visual-slide p {
+  position: relative;
+  z-index: 1;
+  max-width: 92%;
+  margin-bottom: 0;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.28;
+}
+
+.visual-slide-cover {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.visual-slide-cover::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.slide-frame {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.slide-frame span {
+  min-height: 58px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.visual-slide-style {
+  background: #f2f3f5;
+}
+
+.style-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.style-grid span {
+  min-height: 58px;
+  border: 1px solid var(--ink);
+}
+
+.style-grid span:nth-child(1) {
+  background: var(--accent);
+}
+
+.style-grid span:nth-child(2) {
+  background: #111111;
+}
+
+.style-grid span:nth-child(3) {
+  background: #ffffff;
+}
+
+.style-grid span:nth-child(4) {
+  background: repeating-linear-gradient(135deg, #d9dce0 0 8px, #ffffff 8px 16px);
+}
+
+.visual-slide-hook {
+  background: #101010;
+  color: #ffffff;
+}
+
+.hook-window {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  margin-top: 28px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.hook-window span {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hook-window strong {
+  color: var(--accent);
+  font-size: 76px;
+  line-height: 1;
+}
+
+.visual-slide-prompt {
+  background: #ffffff;
+}
+
+.visual-slide-prompt::before {
+  inset: 18px;
+  border: 1px solid var(--accent);
+}
+
+.prompt-stack {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 7px;
+  margin-top: 28px;
+}
+
+.prompt-stack span {
+  padding: 9px 10px;
+  background: var(--surface-alt);
+  border-left: 4px solid var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.visual-slide-cta {
+  color: #ffffff;
+  background: linear-gradient(160deg, var(--accent) 0 48%, #111111 48% 100%);
+}
+
+.cta-strip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.cta-strip span {
+  display: block;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .project-grid {
@@ -588,6 +793,7 @@ p {
 
   .hero-panel,
   .hero-visual,
+  .carousel-board,
   .project-grid,
   .service-grid,
   .steps,
@@ -646,6 +852,7 @@ p {
 
   .hero-panel,
   .hero-visual,
+  .carousel-board,
   .project-grid,
   .service-grid,
   .steps,
@@ -658,6 +865,17 @@ p {
   .service-grid {
     grid-template-columns: 1fr;
     width: calc(100% - 28px);
+  }
+
+  .carousel-board {
+    grid-template-columns: 1fr;
+    padding-right: 0;
+    overflow: visible;
+  }
+
+  .visual-slide {
+    width: min(100%, 330px);
+    min-height: 440px;
   }
 
   .hero-visual img {
