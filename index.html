@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Creator Portfolio</title>
+    <title>AI Creator Portfolio — Video, Ads, Characters</title>
     <meta
       name="description"
       content="Portfolio for AI video, advertising creatives, characters, reels, music experiments, prompts and ComfyUI workflows."
@@ -14,10 +14,11 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="AI Creator Portfolio">
         <span>AI Creator</span>
-        <span>Portfolio</span>
+        <span>Production</span>
       </a>
       <nav class="nav" aria-label="Основная навигация">
         <a href="#work">Кейсы</a>
+        <a href="#services">Услуги</a>
         <a href="#process">Процесс</a>
         <a href="#repos">GitHub</a>
         <a href="#contact">Контакты</a>
@@ -28,17 +29,27 @@
       <section class="hero section-grid">
         <div class="hero-index">01</div>
         <div class="hero-copy">
-          <p class="eyebrow">AI video / ads / characters / reels</p>
-          <h1>Портфолио AI Creator для визуальных кейсов и production workflow.</h1>
+          <p class="eyebrow">AI video / advertising / characters / reels</p>
+          <h1>AI-креативы, которые выглядят как production, а не как тест нейросети.</h1>
+          <div class="hero-actions" aria-label="Основные действия">
+            <a class="button" href="#work">Смотреть кейсы</a>
+            <a class="button button-secondary" href="#contact">Обсудить проект</a>
+          </div>
         </div>
         <div class="hero-panel">
           <p>
-            Сайт показывает не только финальные ролики, но и путь от идеи до результата:
-            задача, сценарий, референсы, промпты, генерация кадров, анимация, монтаж и
-            публикация.
+            Портфолио собрано вокруг полного цикла: идея, сценарий, визуальная система,
+            промпты, генерация, анимация, монтаж и подготовка к публикации.
           </p>
-          <a class="button" href="#work">Смотреть кейсы</a>
+          <dl class="proof-points">
+            <div><dt>4</dt><dd>направления</dd></div>
+            <div><dt>5</dt><dd>репозиториев</dd></div>
+            <div><dt>1</dt><dd>production pipeline</dd></div>
+          </dl>
         </div>
+        <figure class="hero-visual">
+          <img src="assets/hero-production-board.png" alt="AI production board with video frames, character sketches, advertising stills and editing timeline" />
+        </figure>
       </section>
 
       <section class="directions" aria-label="Направления">
@@ -67,17 +78,42 @@
       <section id="work" class="work section-grid">
         <div class="section-number">02</div>
         <div class="section-title">
-          <p class="eyebrow">Case studies</p>
-          <h2>Работы</h2>
+          <p class="eyebrow">Selected case studies</p>
+          <h2>Кейсы, которые нужно показывать первыми</h2>
         </div>
         <div class="project-grid" id="projectGrid" aria-live="polite"></div>
       </section>
 
-      <section id="process" class="process section-grid">
+      <section id="services" class="services section-grid">
         <div class="section-number">03</div>
         <div class="section-title">
+          <p class="eyebrow">Services</p>
+          <h2>Что можно заказать</h2>
+        </div>
+        <div class="service-grid">
+          <article>
+            <span>01</span>
+            <h3>AI-реклама</h3>
+            <p>Концепт, визуальный хук, серия кадров, ролик 10-20 секунд и варианты под соцсети.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>AI-персонаж</h3>
+            <p>Внешность, характер, референс-лист, consistency-набор и сцены для дальнейшей анимации.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Reels / Shorts</h3>
+            <p>Сценарий, вертикальная структура, кадры, титры, монтажный ритм и export-ready версия.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="process section-grid">
+        <div class="section-number">04</div>
+        <div class="section-title">
           <p class="eyebrow">Production pipeline</p>
-          <h2>Как оформлять каждый кейс</h2>
+          <h2>Как выглядит работа над кейсом</h2>
         </div>
         <ol class="steps">
           <li><span>Задача</span><p>Что нужно было создать и для какой аудитории.</p></li>
@@ -90,10 +126,10 @@
       </section>
 
       <section id="repos" class="repos section-grid">
-        <div class="section-number">04</div>
+        <div class="section-number">05</div>
         <div class="section-title">
           <p class="eyebrow">GitHub structure</p>
-          <h2>Репозитории для профиля</h2>
+          <h2>GitHub как доказательство процесса</h2>
         </div>
         <div class="repo-list">
           <article><code>ai-creator-portfolio</code><p>Основной сайт-портфолио.</p></article>
@@ -105,18 +141,21 @@
       </section>
 
       <section id="contact" class="contact section-grid">
-        <div class="section-number">05</div>
+        <div class="section-number">06</div>
         <div class="section-title">
           <p class="eyebrow">Contact</p>
-          <h2>Готово к публикации</h2>
+          <h2>Открыта к AI-video, рекламе и визуальным экспериментам</h2>
         </div>
         <div class="contact-copy">
           <p>
-            Замените контакты, ссылки на соцсети и превью работ в
-            <code>portfolio.config.js</code>. После публикации через GitHub Pages этот сайт
-            станет публичной витриной портфолио.
+            Для сильного первого контакта добавьте реальные ссылки на Telegram, Instagram,
+            TikTok, Behance или email в <code>portfolio.config.js</code>. Этот блок должен
+            вести клиента к разговору, а не к технической инструкции.
           </p>
-          <a class="button" href="case-studies/new-case-template.md">Шаблон кейса</a>
+          <div class="contact-actions">
+            <a class="button" href="mailto:your-email@example.com">Написать</a>
+            <a class="button button-secondary" href="case-studies/new-case-template.md">Шаблон кейса</a>
+          </div>
         </div>
       </section>
     </main>

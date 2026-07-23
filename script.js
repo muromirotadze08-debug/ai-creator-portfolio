@@ -25,6 +25,7 @@
               <span class="project-meta">${escapeText(project.category)}</span>
               <h3>${escapeText(project.title)}</h3>
               <p>${escapeText(project.summary)}</p>
+              <span class="project-open">Открыть кейс</span>
             </span>
           </button>
         `;
@@ -42,7 +43,7 @@
         <p class="eyebrow">${escapeText(project.category)}</p>
         <h2 id="dialogTitle">${escapeText(project.title)}</h2>
         <p>${escapeText(project.summary)}</p>
-        <p>${escapeText(project.result)}</p>
+        <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
         <ul>${pipeline}</ul>
       </article>
     `;
