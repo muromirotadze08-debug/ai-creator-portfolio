@@ -36,7 +36,7 @@
 5. Укажите ветку `main` и папку `/ (root)`.
 6. Сохраните настройки.
 
-Адрес сайта будет похож на:
+Адрес сайта:
 
 ```text
 https://muromirotadze08-debug.github.io/ai-creator-portfolio/
