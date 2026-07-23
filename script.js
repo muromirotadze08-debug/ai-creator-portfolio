@@ -68,6 +68,15 @@
         `,
       )
       .join("");
+    const carouselImages = (project.carouselImages || [])
+      .map(
+        (image) => `
+          <figure class="dialog-carousel-image">
+            <img src="${escapeText(image.src)}" alt="${escapeText(image.alt)}" />
+          </figure>
+        `,
+      )
+      .join("");
     const mediaClass =
       project.media && project.media.orientation === "vertical"
         ? " dialog-media-vertical"
@@ -94,6 +103,7 @@
         <p>${escapeText(project.summary)}</p>
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
         ${media}
+        ${carouselImages ? `<section class="dialog-carousel-images" aria-label="Готовые слайды карусели">${carouselImages}</section>` : ""}
         ${carouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${carouselSlides}</section>` : ""}
         ${tools ? `<div class="dialog-tools" aria-label="Инструменты">${tools}</div>` : ""}
         <ul>${pipeline}</ul>

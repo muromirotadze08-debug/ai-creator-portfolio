@@ -74,6 +74,32 @@ window.portfolioConfig = {
         "Система создания каруселей: хук, структура слайдов, короткий текст и готовый рекламный пример для вымышленной сыворотки «СИЯНИЕ».",
       result: "Финальный формат: готовая серия фото-слайдов для соцсетей и обложек коротких роликов.",
       tools: ["ChatGPT", "Midjourney", "Leonardo AI", "Canva", "CapCut"],
+      carouselImages: [
+        {
+          src: "assets/designer-serum-carousel/slide_01.png",
+          alt: "Слайд 01 карусели сыворотки: сияние, которое продает",
+        },
+        {
+          src: "assets/designer-serum-carousel/slide_02.png",
+          alt: "Слайд 02 карусели сыворотки: капля, которую хочется нанести",
+        },
+        {
+          src: "assets/designer-serum-carousel/slide_03.png",
+          alt: "Слайд 03 карусели сыворотки: ровнее тон, мягче свет",
+        },
+        {
+          src: "assets/designer-serum-carousel/slide_04.png",
+          alt: "Слайд 04 карусели сыворотки: чистая визуальная ассоциация",
+        },
+        {
+          src: "assets/designer-serum-carousel/slide_05.png",
+          alt: "Слайд 05 карусели сыворотки: один шаг в ежедневном уходе",
+        },
+        {
+          src: "assets/designer-serum-carousel/slide_06.png",
+          alt: "Слайд 06 карусели сыворотки: сохранить ритуал",
+        },
+      ],
       carouselSlides: [
         {
           label: "01",
