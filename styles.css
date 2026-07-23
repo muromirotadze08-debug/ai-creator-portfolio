@@ -671,12 +671,22 @@ p {
   border: 1px solid var(--line);
 }
 
+.dialog-media-vertical {
+  width: min(360px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .dialog-media video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000000;
   object-fit: cover;
+}
+
+.dialog-media-vertical video {
+  aspect-ratio: 9 / 16;
 }
 
 .carousel-showcase {

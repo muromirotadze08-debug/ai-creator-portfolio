@@ -68,10 +68,14 @@
         `,
       )
       .join("");
+    const mediaClass =
+      project.media && project.media.orientation === "vertical"
+        ? " dialog-media-vertical"
+        : "";
     const media =
       project.media && project.media.type === "video"
         ? `
-          <figure class="dialog-media">
+          <figure class="dialog-media${mediaClass}">
             <video
               src="${escapeText(project.media.src)}"
               poster="${escapeText(project.media.poster)}"
