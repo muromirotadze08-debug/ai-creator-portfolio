@@ -352,6 +352,28 @@ p {
   font-size: 15px;
 }
 
+.tool-strip,
+.dialog-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.tool-strip span,
+.dialog-tools span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 8px;
+  color: var(--ink);
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .project-open {
   display: inline-block;
   margin-top: 18px;

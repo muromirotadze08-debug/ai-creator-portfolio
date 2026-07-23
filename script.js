@@ -18,6 +18,10 @@
     grid.innerHTML = config.projects
       .map((project, index) => {
         const number = String(index + 1).padStart(2, "0");
+        const tools = (project.tools || [])
+          .slice(0, 5)
+          .map((tool) => `<span>${escapeText(tool)}</span>`)
+          .join("");
         return `
           <button class="project-card" type="button" data-project-index="${index}">
             <span class="project-mark">${number}</span>
@@ -25,6 +29,7 @@
               <span class="project-meta">${escapeText(project.category)}</span>
               <h3>${escapeText(project.title)}</h3>
               <p>${escapeText(project.summary)}</p>
+              ${tools ? `<span class="tool-strip">${tools}</span>` : ""}
               <span class="project-open">Открыть кейс</span>
             </span>
           </button>
@@ -37,6 +42,9 @@
     const pipeline = project.pipeline
       .map((item) => `<li>${escapeText(item)}</li>`)
       .join("");
+    const tools = (project.tools || [])
+      .map((tool) => `<span>${escapeText(tool)}</span>`)
+      .join("");
 
     dialogBody.innerHTML = `
       <article class="dialog-content">
@@ -44,6 +52,7 @@
         <h2 id="dialogTitle">${escapeText(project.title)}</h2>
         <p>${escapeText(project.summary)}</p>
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
+        ${tools ? `<div class="dialog-tools" aria-label="Инструменты">${tools}</div>` : ""}
         <ul>${pipeline}</ul>
       </article>
     `;
