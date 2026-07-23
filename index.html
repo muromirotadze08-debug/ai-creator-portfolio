@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Creator Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio for AI video, advertising creatives, characters, reels, music experiments, prompts and ComfyUI workflows."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AI Creator Portfolio">
+        <span>AI Creator</span>
+        <span>Portfolio</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#work">Кейсы</a>
+        <a href="#process">Процесс</a>
+        <a href="#repos">GitHub</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-index">01</div>
+        <div class="hero-copy">
+          <p class="eyebrow">AI video / ads / characters / reels</p>
+          <h1>Портфолио AI Creator для визуальных кейсов и production workflow.</h1>
+        </div>
+        <div class="hero-panel">
+          <p>
+            Сайт показывает не только финальные ролики, но и путь от идеи до результата:
+            задача, сценарий, референсы, промпты, генерация кадров, анимация, монтаж и
+            публикация.
+          </p>
+          <a class="button" href="#work">Смотреть кейсы</a>
+        </div>
+      </section>
+
+      <section class="directions" aria-label="Направления">
+        <article>
+          <span>01</span>
+          <h2>AI Advertising</h2>
+          <p>Рекламные концепты, продуктовые ролики, визуальные крючки для кампаний.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Animation & Characters</h2>
+          <p>Персонажи, сцены, раскадровки, движение и визуальная последовательность.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Video & Reels</h2>
+          <p>Короткие вертикальные видео, монтажные структуры, сценарии для Shorts.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2>Music & Experiments</h2>
+          <p>Обложки, mood-фреймы, визуальные эксперименты и связка аудио с образом.</p>
+        </article>
+      </section>
+
+      <section id="work" class="work section-grid">
+        <div class="section-number">02</div>
+        <div class="section-title">
+          <p class="eyebrow">Case studies</p>
+          <h2>Работы</h2>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      </section>
+
+      <section id="process" class="process section-grid">
+        <div class="section-number">03</div>
+        <div class="section-title">
+          <p class="eyebrow">Production pipeline</p>
+          <h2>Как оформлять каждый кейс</h2>
+        </div>
+        <ol class="steps">
+          <li><span>Задача</span><p>Что нужно было создать и для какой аудитории.</p></li>
+          <li><span>Идея</span><p>Креативная гипотеза, тон, формат и визуальная логика.</p></li>
+          <li><span>Сценарий</span><p>Хук, структура кадров, текст, темп и CTA.</p></li>
+          <li><span>Промпты</span><p>Модели, запросы, негативные промпты и параметры генерации.</p></li>
+          <li><span>Производство</span><p>Кадры, анимация, апскейл, монтаж, звук и экспорт.</p></li>
+          <li><span>Результат</span><p>Финальный ролик, выводы и что можно улучшить в следующей версии.</p></li>
+        </ol>
+      </section>
+
+      <section id="repos" class="repos section-grid">
+        <div class="section-number">04</div>
+        <div class="section-title">
+          <p class="eyebrow">GitHub structure</p>
+          <h2>Репозитории для профиля</h2>
+        </div>
+        <div class="repo-list">
+          <article><code>ai-creator-portfolio</code><p>Основной сайт-портфолио.</p></article>
+          <article><code>ai-video-case-studies</code><p>Кейсы с идеей, кадрами, промптами и монтажом.</p></article>
+          <article><code>reels-script-library</code><p>Авторские сценарии для Reels, TikTok и Shorts.</p></article>
+          <article><code>comfyui-video-workflows</code><p>JSON-workflow, схемы и объяснение нод.</p></article>
+          <article><code>ai-prompt-library</code><p>Промпты для изображений, видео, персонажей и музыки.</p></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-grid">
+        <div class="section-number">05</div>
+        <div class="section-title">
+          <p class="eyebrow">Contact</p>
+          <h2>Готово к публикации</h2>
+        </div>
+        <div class="contact-copy">
+          <p>
+            Замените контакты, ссылки на соцсети и превью работ в
+            <code>portfolio.config.js</code>. После публикации через GitHub Pages этот сайт
+            станет публичной витриной портфолио.
+          </p>
+          <a class="button" href="case-studies/new-case-template.md">Шаблон кейса</a>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="projectDialog" class="project-dialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Закрыть">Close</button>
+      <div id="dialogBody"></div>
+    </dialog>
+
+    <script src="portfolio.config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
