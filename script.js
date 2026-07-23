@@ -77,6 +77,10 @@
         `,
       )
       .join("");
+    const hasCarouselImages = Boolean(carouselImages);
+    const visibleTools = hasCarouselImages ? "" : tools;
+    const visiblePipeline = hasCarouselImages ? "" : `<ul>${pipeline}</ul>`;
+    const visibleCarouselSlides = hasCarouselImages ? "" : carouselSlides;
     const mediaClass =
       project.media && project.media.orientation === "vertical"
         ? " dialog-media-vertical"
@@ -96,6 +100,7 @@
         `
         : "";
 
+    dialog.classList.toggle("project-dialog-carousel", hasCarouselImages);
     dialogBody.innerHTML = `
       <article class="dialog-content">
         <p class="eyebrow">${escapeText(project.category)}</p>
@@ -104,9 +109,9 @@
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
         ${media}
         ${carouselImages ? `<section class="dialog-carousel-images" aria-label="Готовые слайды карусели">${carouselImages}</section>` : ""}
-        ${carouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${carouselSlides}</section>` : ""}
-        ${tools ? `<div class="dialog-tools" aria-label="Инструменты">${tools}</div>` : ""}
-        <ul>${pipeline}</ul>
+        ${visibleCarouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${visibleCarouselSlides}</section>` : ""}
+        ${visibleTools ? `<div class="dialog-tools" aria-label="Инструменты">${visibleTools}</div>` : ""}
+        ${visiblePipeline}
       </article>
     `;
     dialog.showModal();
