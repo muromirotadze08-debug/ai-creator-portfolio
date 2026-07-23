@@ -301,7 +301,7 @@ p {
 
 .carousel-board {
   display: grid;
-  grid-auto-columns: clamp(260px, 24vw, 340px);
+  grid-auto-columns: clamp(280px, 26vw, 380px);
   grid-auto-flow: column;
   grid-template-columns: none;
   gap: 16px;
@@ -310,6 +310,10 @@ p {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scrollbar-width: thin;
+}
+
+.designer-carousel-board {
+  align-items: start;
 }
 
 .visual-slide {
@@ -324,6 +328,27 @@ p {
   color: #ffffff;
   background: #101010;
   border: 1px solid var(--line);
+}
+
+.designer-slide-card {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 4 / 5;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.designer-slide-card::before {
+  content: none;
+}
+
+.designer-slide-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
 
 .visual-slide::before {
@@ -798,6 +823,11 @@ p {
   .visual-slide {
     width: min(100%, 330px);
     min-height: 440px;
+  }
+
+  .designer-slide-card {
+    width: min(100%, 360px);
+    min-height: 0;
   }
 
   .hero-visual img {
