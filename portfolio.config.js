@@ -51,7 +51,7 @@ window.portfolioConfig = {
       title: "AI Carousel Content System",
       category: "AI Carousels & Social Content",
       summary:
-        "Система создания каруселей: сильный первый слайд, структура истории, короткий текст, визуальные кадры и финальный CTA.",
+        "Система создания каруселей: хук, структура слайдов, короткий текст и примеры для обучения, рекламы и storytelling.",
       result: "Финальный формат: готовая серия слайдов для TikTok Photo Mode, Instagram carousel и Reels covers.",
       tools: ["ChatGPT", "Midjourney", "Leonardo AI", "Canva", "CapCut"],
       pipeline: [
