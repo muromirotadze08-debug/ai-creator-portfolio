@@ -2,7 +2,7 @@ window.portfolioConfig = {
   owner: {
     name: "ИИ-креатор и промпт-мастер",
     github: "muromirotadze08-debug",
-    email: "your-email@example.com",
+    telegram: "https://t.me/Dream_mur",
   },
   projects: [
     {

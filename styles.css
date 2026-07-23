@@ -203,6 +203,19 @@ p {
   background: var(--ink);
 }
 
+.telegram-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.telegram-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
 .proof-points {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
