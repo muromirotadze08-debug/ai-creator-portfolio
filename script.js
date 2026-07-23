@@ -68,6 +68,20 @@
         `,
       )
       .join("");
+    const media =
+      project.media && project.media.type === "video"
+        ? `
+          <figure class="dialog-media">
+            <video
+              src="${escapeText(project.media.src)}"
+              poster="${escapeText(project.media.poster)}"
+              controls
+              playsinline
+              aria-label="${escapeText(project.media.label || project.title)}"
+            ></video>
+          </figure>
+        `
+        : "";
 
     dialogBody.innerHTML = `
       <article class="dialog-content">
@@ -75,6 +89,7 @@
         <h2 id="dialogTitle">${escapeText(project.title)}</h2>
         <p>${escapeText(project.summary)}</p>
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
+        ${media}
         ${carouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${carouselSlides}</section>` : ""}
         ${tools ? `<div class="dialog-tools" aria-label="Инструменты">${tools}</div>` : ""}
         <ul>${pipeline}</ul>

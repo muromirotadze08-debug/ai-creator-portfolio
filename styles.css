@@ -239,7 +239,8 @@ p {
   border-top: 1px solid var(--line);
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 7;
@@ -665,6 +666,19 @@ p {
   padding: 28px;
 }
 
+.dialog-media {
+  margin: 24px 0;
+  border: 1px solid var(--line);
+}
+
+.dialog-media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  object-fit: cover;
+}
+
 .carousel-showcase {
   display: grid;
   grid-template-columns: repeat(5, minmax(110px, 1fr));
@@ -830,7 +844,8 @@ p {
     min-height: 0;
   }
 
-  .hero-visual img {
+  .hero-visual img,
+  .hero-visual video {
     aspect-ratio: 4 / 3;
   }
 
