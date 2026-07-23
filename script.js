@@ -109,7 +109,7 @@
         <p><strong>Результат:</strong> ${escapeText(project.result)}</p>
         ${media}
         ${carouselImages ? `<section class="dialog-carousel-images" aria-label="Готовые слайды карусели">${carouselImages}</section>` : ""}
-        ${visibleCarouselSlides ? `<section class="carousel-showcase" aria-label="Визуальный пример карусели">${visibleCarouselSlides}</section>` : ""}
+        ${visibleCarouselSlides ? `<section class="carousel-showcase" aria-label="Структура продуктовой карусели">${visibleCarouselSlides}</section>` : ""}
         ${visibleTools ? `<div class="dialog-tools" aria-label="Инструменты">${visibleTools}</div>` : ""}
         ${visiblePipeline}
       </article>
